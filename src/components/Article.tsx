@@ -21,7 +21,7 @@ export const Article: React.FC<Props> = ({ article, removeArticle }) => {
         <h1>{article.title}</h1>
         <p>{article.body}</p>
       </div>
-      <button onClick={() => deleteArticle(article)}>Delete</button>
+      <button className="btn btn-primary" onClick={() => deleteArticle(article)}>Delete</button>
     </div>
   )
 }

@@ -21,21 +21,31 @@ export const AddArticle: React.FC<Props> = ({ saveArticle }) => {
 
   return (
     <form onSubmit={addNewArticle} className="Add-article">
-      <input
-        type="text"
-        id="title"
-        placeholder="Title"
-        onChange={handleArticleData}
-      />
-      <input
-        type="text"
-        id="body"
-        placeholder="Description"
-        onChange={handleArticleData}
-      />
-      <button disabled={article === undefined ? true : false}>
-        Add article
-      </button>
+       <fieldset className="Add-article">
+          <fieldset className="form-group">
+              <input className="form-control "
+                type="text"
+                id="title"
+                placeholder="Title"
+                onChange={handleArticleData}
+              />
+          </fieldset>
+          <fieldset className="form-group">
+              <input className="form-control"
+                type="text"
+                id="body"
+                placeholder="Description"
+                onChange={handleArticleData}
+              />
+
+          </fieldset>
+        
+          <button className="btn btn-primary" disabled={article === undefined ? true : false}>
+            Add article
+          </button>
+       </fieldset>
+     
     </form>
   )
 }
+
